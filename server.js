@@ -1,8 +1,17 @@
+//application boot
 var express = require('express');
 var app = express();
+var config = require('./config/config.json');
+app.set('config', config);
 
-app.get('/', function (req, res) {
-    res.send('hey'+"\n");
-});
+//require middlewares
+var store = require('./middlewares/store/interface.js')(app);
+//app.set('store', store);
 
-app.listen(3000, '0.0.0.0');
+app.use(store.connect);
+
+var routes = require('./routes.js');
+
+app.get('/', routes['/']);
+
+app.listen(config.express.port, config.express.ip);
