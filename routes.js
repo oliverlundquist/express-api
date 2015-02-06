@@ -1,5 +1,5 @@
 module.exports = {
-    '/': function (req, res) {
+    'index': function (req, res) {
         req.store
             .insert({ title: "express api", content: "test insert" })
                 .then(function (result) {

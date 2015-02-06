@@ -1,12 +1,13 @@
 {
-	"name": "firstseriousattemptwithexpressjs",
-	"version": "0.0.0",
-	"private": true,
-	"dependencies": {
-		"express": "4.11.1",
-		"rethinkdb": "1.16.0"
-	},
-	"devDependencies": {
-		"nodemon": "1.3.5"
-	}
+  "name": "firstseriousattemptwithexpressjs",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "4.11.1",
+    "rethinkdb": "1.16.0",
+    "socket.io": "1.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "1.3.5"
+  }
 }

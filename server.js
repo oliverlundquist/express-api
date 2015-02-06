@@ -12,6 +12,6 @@ app.use(store.connect);
 
 var routes = require('./routes.js');
 
-app.get('/', routes['/']);
+app.route('/').get(routes['index']);
 
 app.listen(config.express.port, config.express.ip);
