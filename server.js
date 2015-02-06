@@ -28,4 +28,4 @@ var routes = require('./routes.js')(io);
 app.route('/').get(routes.index);
 app.route('/insert').get(routes.insert);
 
-app.listen(config.express.port, 'localhost');//, config.express.ip);
+app.listen(config.express.port, config.express.ip);

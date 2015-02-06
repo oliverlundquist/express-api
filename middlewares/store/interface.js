@@ -26,5 +26,9 @@ module.exports = function (app) {
         return store.insert(obj);
     };
 
+    _store.all = function (callback) {
+        return store.all(callback);
+    };
+
     return _store;
 };
